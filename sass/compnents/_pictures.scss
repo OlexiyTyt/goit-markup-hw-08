@@ -1,0 +1,33 @@
+.pictures-list {
+  display: flex;
+}
+
+.pictures-list__item {
+  width: calc((100% - 60px) / 3);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.pictures-list__product {
+  position: relative;
+}
+
+.pictures-list__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding: 27px;
+
+  color: var(--primary-white-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
+}

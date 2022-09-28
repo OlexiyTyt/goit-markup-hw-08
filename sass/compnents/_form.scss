@@ -1,0 +1,133 @@
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__field {
+  display: flex;
+
+  flex-direction: column;
+  position: relative;
+
+  margin-bottom: 10px;
+  text-align: left;
+
+  &--contract {
+    margin-bottom: 30px;
+  }
+
+  &--container {
+    margin-bottom: 20px;
+  }
+}
+
+.form__label {
+  font-size: 12px;
+  line-height: 14px;
+  color: #757575;
+}
+
+.form__input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    outline: none;
+
+    border: 1px solid rgba(33, 150, 243, 1);
+
+    &:focus ~ svg,
+    &:hover ~ svg {
+      fill: var(--accent-text-color);
+    }
+  }
+}
+
+.form__user-contract {
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+.form__feedback {
+  resize: none;
+  padding: 12px 16px;
+  min-width: 448px;
+  min-height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border: 1px solid rgba(33, 150, 243, 1);
+  }
+}
+
+.form__button {
+  background-color: var(--accent-text-color);
+  color: var(--primary-white-color);
+  padding: 10px 52px;
+  border-radius: 4px;
+  border: 0px;
+  cursor: pointer;
+  font-weight: var(--font-weight700);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  line-height: 160%;
+}
+
+.form__icon {
+  position: absolute;
+  bottom: 14px;
+  left: 13.5px;
+  z-index: 3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__contract-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: var(--font-weight400);
+
+  letter-spacing: 0.03em;
+}
+
+.form__checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 4px;
+}
+
+.form__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.form__checkbox:checked + .form__checkbox-icon {
+  background-color: var(--accent-text-color);
+  background-image: url(../images/contractt.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  border: 2px solid var(--accent-text-color);
+}

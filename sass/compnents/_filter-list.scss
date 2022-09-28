@@ -1,0 +1,15 @@
+.filter-list {
+  font-weight: var(--font-weight500);
+  font-size: 16px;
+  line-height: 1.62;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-list__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
