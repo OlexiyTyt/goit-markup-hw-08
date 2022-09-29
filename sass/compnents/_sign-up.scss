@@ -38,7 +38,7 @@
 
 .sign-up__input {
   padding: 15px 16px;
-  width: 358px;
+  max-width: 100%;
   background-color: var(--footer-background-color);
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -49,5 +49,12 @@
   &:focus {
     border: 1px solid var(--accent-text-color);
     outline: none;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
   }
 }
